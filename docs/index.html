@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+  <!-- Replace the content tag with appropriate information -->
+  <meta name="description" content="DeCoOp: Robust Prompt Tuning with Out-of-Distribution Detection">
+  <meta property="og:title" content="SOCIAL MEDIA TITLE TAG"/>
+  <meta property="og:description" content="DeCoOp: Robust Prompt Tuning with Out-of-Distribution Detection"/>
+  <meta property="og:url" content="https://wnjxyk.github.io/decoop"/>
+  <meta name="keywords" content="Prompt Tuning, Out-of-Distribution Detection, Vision-Language Model, Foundation Model">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <title>DeCoOp: Robust Prompt Tuning with Out-of-Distribution Detection</title>
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+  rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+</head>
+<body>
+
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            
+            <h1 class="title is-1 publication-title">DeCoOp: Robust Prompt Tuning<br>with Out-of-Distribution Detection</h1>
+            <div class="is-size-5 publication-authors">
+              <!-- Paper authors -->
+              <span class="author-block"><a href="https://zhouz.dev" target="_blank">Zhi Zhou</a>,</span>
+              <span class="author-block"><a href="#" target="_blank">Ming Yang</a>,</span>
+              <span class="author-block"><a href="https://www.lamda.nju.edu.cn/shijx" target="_blank">Jiang-Xin Shi</a>,</span>
+              <span class="author-block"><a href="https://www.lamda.nju.edu.cn/guolz" target="_blank">Lan-Zhe Guo</a><sup>‡</sup>,</span>
+              <span class="author-block"><a href="https://cs.nju.edu.cn/liyf/index.htm" target="_blank">Yu-Feng Li</a><sup>‡</sup></span>
+            </div>
+
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">National Key Laboratory for Novel Software Technology, Nanjing University, China</span>
+              <span class="eql-cntrb"><br><small><sup>‡</sup>Corresponding Author</small></span>
+              <span class="eql-cntrb"><br><small>
+                <a href="mailto:zhouz@lamda.nju.edu.cn">zhouz@lamda.nju.edu.cn</a>
+              </small></span>
+            </div>
+
+            <div class="column has-text-centered"><div class="publication-links">
+              <span class="link-block">
+                <a href="https://arxiv.org/pdf/<ARXIV PAPER ID>.pdf" target="_blank" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon"><i class="fas fa-file-pdf"></i></span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://github.com/WNJXYK/DeCoOp" target="_blank" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon"><i class="fab fa-github"></i></span>
+                  <span>Code</span>
+                </a>
+              </span>
+            </div></div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified"><p>
+            Vision-language models (VLMs), such as CLIP, have demonstrated impressive zero-shot capabilities for various downstream tasks. Their performance can be further enhanced through few-shot prompt tuning methods. However, current studies evaluate the performance of learned prompts separately on base and new classes. This evaluation lacks practicality for real-world applications since downstream tasks cannot determine whether the data belongs to base or new classes in advance. In this paper, we explore a problem setting called <i><b>O</b>pen-world <b>P</b>rompt <b>T</b>uning</i> (OPT), which involves tuning prompts on base classes and evaluating on a combination of base and new classes. By introducing <i><b>De</b>composed <b>P</b>rompt <b>T</b>uning</i> framework (DePt), we theoretically demonstrate that OPT can be solved by incorporating out-of-distribution detection into prompt tuning, thereby enhancing the base-to-new discriminability. Based on DePt, we present a novel prompt tuning approach, namely, <i><b>De</b>composed <b>Co</b>ntext <b>Op</b>timization</i> (DeCoOp), which introduces new-class detectors and sub-classifiers to further enhance the base-class and new-class discriminability. Experimental results on 11 benchmark datasets validate the effectiveness of DePt and demonstrate that DeCoOp outperforms state-of-the-art methods, providing a significant 2% average accuracy improvement. 
+        </p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column">
+          <h2 class="title is-3">OPT Problem Setting</h2>
+          <div class="item">
+            <img style="width: 50%;" src="./static/images/setting.png" alt="opt" />
+            <h2 class="subtitle">Figure 1: Overall illustation of OPT problem setting.</h2>
+          </div>
+        </div>
+      </div>
+      <div class="content has-text-justified"><p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper tellus sed ante aliquam tempus. Etiam porttitor urna feugiat nibh elementum, et tempor dolor mattis. Donec accumsan enim augue, a vulputate nisi sodales sit amet. Proin bibendum ex eget mauris cursus euismod nec et nibh. Maecenas ac gravida ante, nec cursus dui. Vivamus purus nibh, placerat ac purus eget, sagittis vestibulum metus. Sed vestibulum bibendum lectus gravida commodo. Pellentesque auctor leo vitae sagittis suscipit.
+      </p></div>
+    </div>
+  </div>
+</section>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column">
+          <h2 class="title is-3">DeCoOp Approach</h2>
+          <div class="item">
+            <img style="width: 100%;" src="./static/images/method.png" alt="decoop" />
+            <h2 class="subtitle">Figure 2: Overall illustation of DeCoOp approach.</h2>
+          </div>
+        </div>
+      </div>
+      <div class="content has-text-justified"><p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper tellus sed ante aliquam tempus. Etiam porttitor urna feugiat nibh elementum, et tempor dolor mattis. Donec accumsan enim augue, a vulputate nisi sodales sit amet. Proin bibendum ex eget mauris cursus euismod nec et nibh. Maecenas ac gravida ante, nec cursus dui. Vivamus purus nibh, placerat ac purus eget, sagittis vestibulum metus. Sed vestibulum bibendum lectus gravida commodo. Pellentesque auctor leo vitae sagittis suscipit.
+      </p></div>
+    </div>
+  </div>
+</section>
+
+
+  <!--BibTex citation -->
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>@inproceedings{zhou24decoop,
+    author       = {Zhi Zhou and Ming Yang and Jiang-Xin Shi and Lan-Zhe Guo and Yu-Feng Li},
+    title        = {DeCoOp: Robust Prompt Tuning with Out-of-Distribution Detection},
+    booktitle    = {Proceedings of the 41st International Conference on Machine Learning},
+    year         = {2024}
+}</code></pre>
+    </div>
+  </section>
+  <!--End BibTex citation -->
+
+
+  <footer class="footer"> 
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content">
+            <p>
+              This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+              You are free to borrow the of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+              Commons Attribution-ShareAlike 4.0 International License</a>.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  </body>
+</html>
