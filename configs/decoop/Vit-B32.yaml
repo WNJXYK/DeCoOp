@@ -1,0 +1,13 @@
+method:
+    name: 'decoop-ViT-B32'
+    n_ctx: 16
+    backbone: 'ViT-B/32'
+    train_batch_size: 32
+    eval_batch_size: 256
+    lr: 0.002
+    train_ood_epoch: 50
+    train_epoch: 100
+    print_epoch: 10
+    ctx_init: 'itap_of_a_{}. a_bad_photo_of_the_{}. a_origami_{}. a_photo_of_the_large_{}. a_{}_in_a_video_game. art_of_the_{}. a_photo_of_the_small_{}.'
+    K: 3
+    ood_margin: 0.4

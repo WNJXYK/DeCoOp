@@ -1,0 +1,5 @@
+dataset:
+    root: 'DATA'
+    name: 'ucf101'
+    shots: 16
+    ctx_init: "a photo of a person doing {}."

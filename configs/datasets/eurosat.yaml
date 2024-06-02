@@ -1,0 +1,5 @@
+dataset:
+    root: 'DATA'
+    name: 'eurosat'
+    shots: 16
+    ctx_init: "a centered satellite photo of {}."

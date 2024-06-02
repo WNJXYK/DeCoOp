@@ -1,0 +1,5 @@
+dataset:
+    root: 'DATA'
+    name: 'imagenet'
+    shots: 16
+    ctx_init: "a photo of a {}."

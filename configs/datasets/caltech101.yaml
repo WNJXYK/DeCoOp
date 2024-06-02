@@ -1,0 +1,5 @@
+dataset:
+    root: 'DATA'
+    name: 'caltech-101'
+    shots: 16
+    ctx_init: "a photo of a {}."

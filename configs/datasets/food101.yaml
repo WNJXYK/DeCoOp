@@ -1,0 +1,5 @@
+dataset:
+    root: 'DATA'
+    name: 'food101'
+    shots: 16
+    ctx_init: "a photo of {}, a type of food."

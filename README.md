@@ -6,7 +6,7 @@
 
 ## OPT Problem Setting
 
-![OPT](https://zhouz.dev/DeCoOp/static/images/setting.png)
+![OPT](https://zhouz.dev/DeCoOp/static/images/setting-wide.png)
 
 In this paper, we examine a problem setting known as 
 ***O**pen-world **P**rompt **T**uning* 
