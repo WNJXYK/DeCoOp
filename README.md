@@ -1,7 +1,7 @@
 # DeCoOp: Robust Prompt Tuning with Out-of-Distribution Detection
 
 <p align="center">
-🏠 <a href="https://wnjxyk.github.io/DeCoOp" target="_blank">Homepage</a> • 📃 <a href="https://arxiv.org/abs/" target="_blank">Paper</a><br>
+🏠 <a href="https://wnjxyk.github.io/DeCoOp" target="_blank">Homepage</a> • 📃 <a href="https://arxiv.org/abs/2406.00345" target="_blank">Paper</a><br>
 </p>
 
 ## OPT Problem Setting
